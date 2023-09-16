@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" id="titulo"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div id="container">
+    <h2 class="texto">TeLllevoApp</h2>
+    <ion-avatar id="avatar" #avatar>
+      <img alt="Silhouette of a person's head"
+        src="https://static.vecteezy.com/system/resources/previews/013/923/539/original/car-logo-vehicle-sports-png.png" />
+    </ion-avatar>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>iniciar sesion</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+
+          <ion-item>
+            <ion-input [(ngModel)]="user.username" label="Nombre Usuario" labelPlacement="floating"
+              placeholder="Ingrese su Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+              placeholder="Ingrese su Contraseña">
+            </ion-input>
+          </ion-item>
+          <br>
+          <ion-button (click)="enviarPerfil()" size="small" shape="round">Conectar</ion-button><br>
+          <br>
+          <ion-button id="open-modal" fill="clear">Recuperar contraseña</ion-button><br>
+             
+        
+          
+          <div>
+
+            <h1>{{mensaje}}</h1><br>
+          </div>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-alert trigger="present-alert" header="Registro" subHeader="{{mensaje}}" 
+      [buttons]="alertButtons"></ion-alert>
+    <ion-modal trigger="open-modal">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Salir</ion-button>
+            </ion-buttons>
+            <ion-title>Recuperar contraseña </ion-title>
+            <ion-buttons slot="end" id="present-alert">
+              <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-item>
+            <ion-input [(ngModel)]="user.username" label="Nombre Usuario" labelPlacement="floating"
+              placeholder="Ingrese su Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+              placeholder="Ingrese su Contraseña"></ion-input>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+   
+
+
+  </div>
+</ion-content>

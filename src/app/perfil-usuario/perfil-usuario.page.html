@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="['/home']">back</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+  </ion-header>
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+  </div>
+
+  <div id="container">
+    <h2 class="texto">TeLlevoApp</h2>
+    <div id="container">
+      <ion-label>Usuario: {{user.username}}</ion-label><br><br>
+    </div>
+
+    <ion-card>
+      <img src="https://eyespace.com.ve/wp-content/uploads/2015/05/Screen-Shot-2015-05-17-at-9.51.26-PM.png">
+    </ion-card>
+
+    <h5>Disponibles</h5>
+
+    <ion-card>
+      <img alt="Silhouette of mountains"
+        src="https://th.bing.com/th/id/R.351f87425008f66d9cdfbb1c9e22e2eb?rik=lcIN2CAcDjehjw&pid=ImgRaw&r=0" />
+      <ion-card-header>
+        <ion-card-title>URGENIO</ion-card-title>
+        <ion-card-subtitle>Hola!Es un placer servirte como tu conductor hoy.</ion-card-subtitle>
+      </ion-card-header>
+      
+
+    </ion-card>
+  </div>
+
+</ion-content>
